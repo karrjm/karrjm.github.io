@@ -5,8 +5,6 @@ html {
 
 body {
     margin: 0;
-    background-image: url('resources\shader.gif');
-    background-repeat: repeat;
 }
 
 h1 {
@@ -21,7 +19,7 @@ hr {
 }
 
 pre {
-    font-family: monospace, monospace;
+    font-family: 'Inter', sans-serif;
     font-size: 1em
 }
 
@@ -44,7 +42,7 @@ strong {
 code,
 kbd,
 samp {
-    font-family: monospace, monospace;
+    font-family: 'Inter', sans-serif;
     font-size: 1em
 }
 
@@ -77,7 +75,7 @@ input,
 optgroup,
 select,
 textarea {
-    font-family: inherit;
+    font-family: 'Inter', sans-serif;
     font-size: 100%;
     line-height: 1.15;
     margin: 0
@@ -288,7 +286,13 @@ header.home h1 span.name {
 }
 
 :root {
-    font-family: -apple-system, BlinkMacSystemFont, "avenir next", avenir, helvetica, "helvetica neue", ubuntu, roboto, noto, "segoe ui", arial, sans-serif
+    font-family: 'Inter', sans-serif;
+}
+
+@supports (font-variation-settings: normal) {
+    :root {
+        font-family: 'Inter var', sans-serif;
+    }
 }
 
 dd,
@@ -455,7 +459,7 @@ h1 {
 
 .section h2,
 body {
-    background: #fff
+    background: #ffffc2;
 }
 
 dd,
