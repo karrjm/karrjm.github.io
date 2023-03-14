@@ -12,7 +12,7 @@ div.dither {
 
 body {
   font-family: Cambria, Georgia, serif;
-  margin: 0 128px;
+  margin: 0 64px;
 }
 
 p.body {
@@ -22,6 +22,12 @@ p.body {
   margin-left: 200px;
 }
 
+p.note {
+  font-size: 2rem;
+  font-weight: normal;
+  text-align: center;
+}
+
 span {
   color: #000000;
   font-size: 128px;
@@ -29,10 +35,6 @@ span {
   text-align: left;
   display: block;
 }
-
-h1,
-h2,
-h3 {}
 
 ul,
 li {
@@ -46,9 +48,39 @@ ul {
   flex-wrap: wrap;
 }
 
+.post {
+  text-decoration: none;
+  color: #000;
+  display: block;
+  height: 10em;
+  width: 10em;
+  padding: 1em;
+  box-shadow: 5px 5px 7px rgba(33, 33, 33, .7);
+}
+
+li:nth-child(odd) {
+  background-color: #f6c2d9;
+}
+
+li:nth-child(even) {
+  background-color: #fff69b;
+}
+
+li:nth-child(3n) {
+  background-color: #bcdfc9;
+}
+
+li:nth-child(4n) {
+  background-color: #a1c8e9;
+}
+
+li:nth-child(5n) {
+  background-color: #e4dae2;
+}
+
 section {
-  border: 2px solid #000000;
-  box-shadow: 3px 5px #282828;
+  border: 1px dotted #000000;
+  box-shadow: 10px 10px black;
   margin: 0 auto;
   margin-bottom: 32px;
   margin-top: 22px;
