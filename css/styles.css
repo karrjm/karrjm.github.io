@@ -52,10 +52,10 @@ p {
 }
 
 p.note {
-    font-size: 3.5rem;
+    font-size: 3.3rem;
+    hyphens: auto;
     font-weight: normal;
-    padding: 10% 0px 0px;
-    text-align: center;
+    text-align: left;
     font-family: 'Reenie Beanie', cursive;
     margin: auto;
 }
