@@ -41,15 +41,28 @@ p {
     font-size: x-large;
 }
 
+.post {
+    text-decoration: none;
+    color: #000;
+    display: block;
+    height: 10em;
+    width: 10em;
+    padding: 1em;
+    box-shadow: 10px 10px 10px rgba(33, 33, 33, 0.7);
+}
+
 p.note {
-    font-size: 2rem;
+    font-size: 3.5rem;
     font-weight: normal;
+    padding: 10% 0px 0px;
     text-align: center;
+    font-family: 'Reenie Beanie', cursive;
+    margin: auto;
 }
 
 img.headshot {
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 100%;
 }
 
 span {
@@ -84,15 +97,7 @@ section {
     display: flex;
 }
 
-.post {
-    text-decoration: none;
-    color: #000;
-    display: block;
-    height: 10em;
-    width: 10em;
-    padding: 1em;
-    box-shadow: 10px 10px 10px rgba(33, 33, 33, 0.7);
-}
+
 
 li:nth-child(odd) {
     background-color: #f6c2d9;
