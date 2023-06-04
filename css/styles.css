@@ -1,5 +1,18 @@
 body {
     font-family: "Lucida Console", monospace;
+    /* color: #fec3de; */
+    color: #fcfde9;
+    background-color: #0c50ff;
+}
+
+.text-container {
+    margin: auto;
+    width: 80%;
+}
+
+hr {
+    border-top: 2px solid #fcfde9;
+    border-bottom: none;
 }
 
 .gif-with-caption {
@@ -10,9 +23,18 @@ body {
 }
 
 .gif {
-    width: 100%
+    width: 80%
 }
 
 .caption {
-    margin-top: 5px
+    margin-top: 5px;
+    width: 80%;
+}
+
+a {
+    /* color: #f099fb;
+    background-color: #9a6df8; */
+
+    color: #9a6df8;
+    background-color: #f099fb;
 }
