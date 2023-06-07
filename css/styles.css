@@ -1,14 +1,17 @@
 body {
-    font-family: "Lucida Console", monospace;
-    /* color: #fec3de; */
     color: #fcfde9;
     background-color: #0c50ff;
+    /* font-size: 1.2em; */
 }
 
-.text-container {
-    margin: auto;
-    width: 80%;
+h1 {
+    font-family: 'Archivo Black';
 }
+
+p {
+    font-family: 'Space Mono';
+}
+
 
 hr {
     border-top: 2px solid #fcfde9;
@@ -19,22 +22,21 @@ hr {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 20px auto
+    margin: 3% auto
 }
 
 .gif {
-    width: 80%
+    width: 70%;
 }
 
 .caption {
     margin-top: 5px;
-    width: 80%;
+    width: 70%;
+    text-align: justify;
 }
 
 a {
-    /* color: #f099fb;
-    background-color: #9a6df8; */
-
-    color: #9a6df8;
-    background-color: #f099fb;
+    color: #fcfde9;
+    background-color: #497cff;
+    text-decoration: none;
 }
