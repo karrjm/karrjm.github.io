@@ -62,3 +62,11 @@ a {
         transform: translateY(0em);
     }
 }
+
+.faq-item {
+    margin-bottom: 20px;
+}
+
+.faq-item strong {
+    display: block;
+}
