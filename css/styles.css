@@ -2,16 +2,19 @@ body {
     color: #fcfde9;
     background-color: #0c50ff;
     font-size: 2em;
+    font-family: 'Space Mono';
 }
 
 h1 {
     font-family: 'Archivo Black';
 }
 
-p & span & a & figcaption {
-    font-family: 'Space Mono';
+#main-content p,
+#main-content span,
+#main-content a,
+#main-content figcaption {
+    text-align: justify;
 }
-
 
 hr {
     border-top: 2px solid #fcfde9;
@@ -22,7 +25,7 @@ hr {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 3% auto
+    margin: 3% auto;
 }
 
 .gif {
@@ -47,7 +50,7 @@ a {
 }
 
 @keyframes wave-text {
-    00% {
+    0% {
         transform: translateY(0em);
     }
 
