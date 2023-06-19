@@ -8,7 +8,7 @@ h1 {
     font-family: 'Archivo Black';
 }
 
-p {
+p & span & a & figcaption {
     font-family: 'Space Mono';
 }
 
@@ -39,4 +39,23 @@ a {
     color: #fcfde9;
     background-color: #497cff;
     text-decoration: none;
+}
+
+.animation {
+    display: inline-block;
+    animation: wave-text 1s ease-in-out infinite;
+}
+
+@keyframes wave-text {
+    00% {
+        transform: translateY(0em);
+    }
+
+    60% {
+        transform: translateY(-0.6em);
+    }
+
+    100% {
+        transform: translateY(0em);
+    }
 }
