@@ -1,5 +1,5 @@
 body {
-    color: #fcfde9;
+    color: #fff;
     background-color: #0c50ff;
     font-size: 2em;
     font-family: 'Space Mono';
@@ -17,7 +17,7 @@ h1 {
 }
 
 hr {
-    border-top: 2px solid #fcfde9;
+    color: #fff;
     border-bottom: none;
 }
 
@@ -39,7 +39,7 @@ hr {
 }
 
 a {
-    color: #fcfde9;
+    color: #fff;
     background-color: #497cff;
     text-decoration: none;
 }
