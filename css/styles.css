@@ -70,3 +70,21 @@ a {
 .faq-item strong {
     display: block;
 }
+
+.frame {
+    margin: 0;
+    padding: 10px;
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+iframe {
+    height: 99vh !important;
+    border: none;
+    width: 95%;
+    margin-left: 100px;
+    margin-top: 150px;
+    margin-bottom: 150px;
+    transform: skew(8deg, 8deg);
+    filter: drop-shadow(10px 6px 6px black);
+}
