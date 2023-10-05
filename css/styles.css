@@ -1,8 +1,14 @@
 body {
+    color: #6079fd;
+    background-color: #08090c;
+    font: 2em 'Space Mono';
+    margin: 20px 80px 20px;
+}
+
+a {
     color: #fff;
-    background-color: #0c50ff;
-    font-size: 2em;
-    font-family: 'Space Mono';
+    background-color: #3850ef;
+    text-decoration: none;
 }
 
 h1 {
@@ -17,7 +23,7 @@ h1 {
 }
 
 hr {
-    color: #fff;
+    border-top: #6079fd dotted;
     border-bottom: none;
 }
 
@@ -25,23 +31,17 @@ hr {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 3% auto;
+    margin: 10% auto;
 }
 
-.gif {
-    width: 40%;
+.gif,
+.caption {
+    width: 66%;
 }
 
 .caption {
     margin-top: 5px;
-    width: 40%;
     text-align: justify;
-}
-
-a {
-    color: #fff;
-    background-color: #497cff;
-    text-decoration: none;
 }
 
 .animation {
@@ -50,16 +50,14 @@ a {
 }
 
 @keyframes wave-text {
-    0% {
+
+    0%,
+    100% {
         transform: translateY(0em);
     }
 
     60% {
         transform: translateY(-0.6em);
-    }
-
-    100% {
-        transform: translateY(0em);
     }
 }
 
@@ -69,22 +67,4 @@ a {
 
 .faq-item strong {
     display: block;
-}
-
-.frame {
-    margin: 0;
-    padding: 10px;
-    height: 100vh;
-    overflow-y: hidden;
-}
-
-iframe {
-    height: 99vh !important;
-    border: none;
-    width: 95%;
-    margin-left: 100px;
-    margin-top: 150px;
-    margin-bottom: 150px;
-    transform: skew(8deg, 8deg);
-    filter: drop-shadow(10px 6px 6px black);
 }
