@@ -19,6 +19,10 @@ html {
     background: greenyellow;
 }
 
+a {
+    color: green;
+}
+
 /* Primary Grid */
 body {
     display: grid;
