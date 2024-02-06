@@ -7,23 +7,23 @@
 
 body,
 html {
-    font-family: 'Roboto Condensed';
+    font-family: 'IBM Plex Mono';
     margin: 0;
     padding: 0;
 }
 
 ::selection {
-    color: darkgreen;
-    background: greenyellow;
+    color: #796cf9;
+    background: #3e34f9;
 }
 
 a {
-    color: #00ff00;
+    color: #3e34f9;
     text-decoration: none;
 }
 
 a:hover {
-    color: darkgreen;
+    color: #3e34f9;
     text-decoration: underline;
 }
 
@@ -61,7 +61,6 @@ h2 {
 
 h3 {
     margin: 0;
-    font-style: italic;
     text-decoration: underline;
 }
 
