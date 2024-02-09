@@ -1,33 +1,18 @@
 :root {
-    --primary-color: #2400fd;
-    --background-color: #f7f0dc;
-    --hover-color: #796cf9;
-    --selection-background: #f4af41;
+    --primary-color: #f7f0dc;
+    --background-color: #2400fd;
+
+    --hover-color: #fff;
+    --selection-background: #3060fc;
+
+    font-family: 'IBM Plex Mono', sans-serif;
+    font-style: italic;
     font-size: 1.5em;
-    letter-spacing: -0.03em;
-    /* transform: skew(2deg, 8deg); */
 }
 
-body,
 html {
-    font-family: 'IBM Plex Mono', sans-serif;
-    margin: 0;
     color: var(--primary-color);
     background-color: var(--background-color);
-}
-
-::selection {
-    color: var(--hover-color);
-    background: var(--selection-background);
-}
-
-a {
-    text-decoration: none;
-}
-
-a:hover {
-    color: var(--hover-color);
-    text-decoration: underline;
 }
 
 /* primary grid */
@@ -36,22 +21,37 @@ body {
     grid-template-columns: minmax(min-content, 30%) 1fr;
     overflow: hidden;
     height: 100vh;
+    transform: skew(2deg, 8deg);
+    padding-top: 200px;
+    /* margin-top: 600px; */
 }
 
 /* side bar */
 header {
     padding: 0 1em 2em 1em;
-    border-right: 1px solid var(--primary-color);
+    border-right: 2px solid var(--primary-color);
+}
+
+h1 {
+    margin-bottom: 0;
+    font-style: normal;
 }
 
 main {
     overflow-y: scroll;
     display: grid;
     grid-template-columns: minmax(min-content, 30%) 1fr;
+
+    /* margin-top: 80px; */
+    /* transform: skew(2deg, 8deg); */
 }
 
-h1 {
-    margin-bottom: 0;
+main::-webkit-scrollbar {
+    display: none;
+}
+
+section {
+    padding: 1.5em;
 }
 
 h3 {
@@ -63,10 +63,6 @@ h4 {
     font-weight: normal;
     font-style: italic;
     margin-top: .25em;
-}
-
-section {
-    padding: 1.5em;
 }
 
 p {
@@ -121,4 +117,19 @@ figure img:first-of-type {
     figure {
         grid-template-columns: 1fr;
     }
+}
+
+::selection {
+    color: var(--hover-color);
+    background: var(--selection-background);
+}
+
+a {
+    color: #f7f0dc;
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--hover-color);
+    text-decoration: underline;
 }
