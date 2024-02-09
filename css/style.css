@@ -22,7 +22,7 @@ body {
     overflow: hidden;
     height: 100vh;
     transform: skew(2deg, 8deg);
-    padding-top: 200px;
+    padding-top: 100px;
     /* margin-top: 600px; */
 }
 
