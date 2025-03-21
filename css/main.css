@@ -1,0 +1,242 @@
+/* Main CSS File - Common styles for all pages */
+
+/* Font Face Declarations */
+@font-face {
+    font-family: 'TexGyreHerosCn';
+    src: url('../fonts/texgyreheroscn-regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TexGyreHerosCn';
+    src: url('../fonts/texgyreheroscn-italic.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TexGyreHerosCn';
+    src: url('../fonts/texgyreheroscn-bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TexGyreHerosCn';
+    src: url('../fonts/texgyreheroscn-bolditalic.otf') format('opentype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Base reset and default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Root variables */
+:root {
+    /* Typography */
+    --font-primary: 'TexGyreHerosCn', sans-serif;
+    --font-size-huge: 5.3125rem;
+    /* 85px */
+    --font-size-large: 2.8125rem;
+    /* 45px */
+    --font-size-medium: 2rem;
+    /* 32px */
+    --font-size-body: 1rem;
+    /* 16px */
+    --font-size-small: 0.875rem;
+    /* 14px */
+
+    --line-height-huge: 1.1;
+    --line-height-large: 1.2;
+    --line-height-medium: 1.3;
+    --line-height-body: 1.6;
+    --line-height-small: 1.4;
+
+    --letter-spacing-huge: -0.03em;
+    --letter-spacing-medium: -0.02em;
+    --letter-spacing-small: -0.01em;
+    --letter-spacing: 0;
+    /* Default letter spacing for elements like nav */
+
+    /* Colors */
+    --color-black: #000;
+    --color-white: #fff;
+    --color-text-dark: #333;
+    --color-text-light: #ccc;
+    --color-text-muted: #666;
+    --color-nav-bg: #ffdec2;
+    --color-border: #eee;
+    --color-focus: #0066cc;
+
+    /* Spacing */
+    --spacing-xs: 0.625rem;
+    --spacing-sm: 0.9375rem;
+    --spacing-md: 1.875rem;
+    --spacing-lg: 3.75rem;
+    --spacing-xl: 5.625rem;
+    --spacing-xxl: 7.5rem;
+}
+
+/* Base styles */
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--color-white);
+    color: var(--color-text-dark);
+    line-height: var(--line-height-body);
+    font-weight: 300;
+}
+
+body:not(.index-page) {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-primary);
+    font-weight: 400;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+/* Image container */
+.image-container {
+    width: 100%;
+    position: relative;
+    margin-bottom: var(--spacing-md);
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Bottom navigation */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 900px;
+    background-color: var(--color-nav-bg);
+    color: var(--color-black);
+    padding: 2.2rem var(--spacing-lg);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.bottom-nav a {
+    color: var(--color-black);
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing);
+    white-space: nowrap;
+    padding: 0 var(--spacing-lg);
+}
+
+.bottom-nav a:focus-visible {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 4px;
+}
+
+/* Accessibility */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--color-black);
+    color: var(--color-white);
+    padding: 8px;
+    z-index: 2000;
+    text-decoration: none;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 48rem) {
+
+    /* 768px */
+    :root {
+        --font-size-huge: 3.75rem;
+        /* 60px */
+        --font-size-large: 2.25rem;
+        /* 36px */
+        --font-size-medium: 1.5rem;
+        /* 24px */
+    }
+
+    .bottom-nav {
+        width: 100%;
+        padding: 1.5rem var(--spacing-md);
+        max-width: 100%;
+        left: 0;
+        transform: none;
+        justify-content: space-around;
+    }
+
+    .bottom-nav a {
+        font-size: 1.125rem;
+        /* 18px */
+        padding: 0 var(--spacing-md);
+    }
+}
+
+/* Print styles */
+@media print {
+
+    .bottom-nav,
+    .skip-link {
+        display: none !important;
+    }
+
+    body {
+        padding: 0;
+        margin: 0;
+    }
+
+    a {
+        text-decoration: underline;
+        color: var(--color-black);
+    }
+
+    a::after {
+        content: " (" attr(href) ")";
+        font-size: 0.8em;
+        font-weight: normal;
+    }
+}

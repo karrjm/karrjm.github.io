@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio showcasing creative projects and process documentation">
+  <meta name="theme-color" content="#ffdec2">
+  <title>Portfolio | Work</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <style>
+    html,
+    body {
+      overflow: hidden;
+      /* Prevent page scrolling */
+      height: 100%;
+    }
+
+    /* ===== Process Styling - Refactored ===== */
+    /* Structure mirrors projects scrollbar for consistency */
+
+    /* Column styling - ensure consistent padding */
+    .column {
+      flex: 1;
+      height: 100vh;
+      overflow-y: auto;
+      overflow-x: hidden;
+      position: relative;
+      scrollbar-width: none;
+      /* Firefox */
+      -ms-overflow-style: none;
+      /* IE and Edge */
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .column::-webkit-scrollbar {
+      display: none;
+    }
+
+    .column.right {
+      background-color: var(--color-black);
+      padding: 0;
+    }
+
+    /* Process content container - mirrors .content in projects */
+    .process-content {
+      padding: 0 var(--spacing-lg) var(--spacing-lg) var(--spacing-lg);
+      padding-bottom: calc(6.25rem + var(--spacing-lg));
+      box-sizing: border-box;
+      width: 100%;
+    }
+
+    /* Process component - mirrors project-component styling */
+    .process-component {
+      width: 100%;
+      max-width: 85%;
+      margin: 0 auto var(--spacing-xl);
+      box-sizing: border-box;
+      position: relative;
+    }
+
+    .process-component:last-child {
+      margin-bottom: var(--spacing-lg);
+    }
+
+    /* Process image container */
+    .process-component .image-container {
+      width: 100%;
+      overflow: hidden;
+      margin-bottom: var(--spacing-sm);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      position: relative;
+    }
+
+    .process-component .image-container img,
+    .process-component .image-container video {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Process caption */
+    .process-caption {
+      font-size: var(--font-size-small);
+      line-height: 1.4;
+      color: rgba(255, 255, 255, 0.85);
+      margin: var(--spacing-xs) 0 0;
+    }
+
+    /* Process grid layout for multi-image components */
+    .process-grid {
+      display: grid;
+      gap: var(--spacing-md);
+      margin-bottom: var(--spacing-md);
+    }
+
+    .process-grid.two-column {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .process-grid.three-column {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .process-grid.main-sidebar {
+      grid-template-columns: 2fr 1fr;
+    }
+
+    .process-grid.sidebar-main {
+      grid-template-columns: 1fr 2fr;
+    }
+
+    /* Layout variants */
+    .process-component.featured .image-container {
+      margin-bottom: var(--spacing-sm);
+    }
+
+    .process-component.text-overlay .image-container {
+      margin-bottom: 0;
+    }
+
+    .process-component.text-overlay .process-caption {
+      position: absolute;
+      bottom: var(--spacing-sm);
+      left: var(--spacing-sm);
+      right: var(--spacing-sm);
+      background: rgba(0, 0, 0, 0.7);
+      padding: var(--spacing-xs);
+      margin: 0;
+      z-index: 2;
+    }
+
+    /* Media queries */
+    @media screen and (max-width: 48rem) {
+      .process-component {
+        max-width: 100%;
+      }
+
+      .process-grid.two-column,
+      .process-grid.three-column,
+      .process-grid.main-sidebar,
+      .process-grid.sidebar-main {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body class="index-page">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <main id="main-content" class="main-container">
+    <!-- Left Column - Projects -->
+    <section class="column left" aria-label="Projects showcase">
+      <header class="column-header">
+        <h1 class="column-title">Projects</h1>
+      </header>
+
+      <div class="content">
+        <!-- Project Component (Reusable) -->
+        <article class="project-component">
+          <figure class="image-container">
+            <img src="img/projects/Front Seat/Main Image/menu.gif"
+              alt="Rabbit Hole project - Interface of a video game showing a virtual environment" width="800"
+              height="600" loading="eager" />
+          </figure>
+          <h2 class="item-title">Front Seat: WIP, 2025</h2>
+          <p class="item-materials">Simulation Video Game, Unity</p>
+          <em>In American culture, the front seat of the motor vehicle is quickly becoming the site of all human
+            activity—pleasure, vulnerability, politics, violence—all from the comfort of your car.</em>
+          <br>
+          <br>
+          <p class="item-description">The automobile front seat represents a spatial paradox in American life—neither
+            fully public nor truly
+            private. As traditional public spaces diminish, the car offers perceived sanctuary while enabling public
+            transmission through digital media.
+            This transformation didn't happen overnight. The front seat evolved through distinct historical phases:
+            passive consumption (radio, drive-ins) defined the 50s-60s; personalization (cassette decks) emerged in the
+            70s-80s; communication (car phones) dominated the 90s-2000s; and finally, content creation (smartphones,
+            dash cams) characterizes our present era.
+            Today, this evolution is most evident in the front-seat vlog—camera pointed inward at the driver, dashboard
+            framing the shot. The car's acoustic properties create an intimate theater for digital performance. Sound
+            insulation, controlled lighting, and confined dimensions produce the perfect setting for emotional
+            expression that feels both authentic and constructed.
+            The driver's seat conveys inherent authority, with the driver-as-subject positioned in control of both
+            vehicle and narrative. Through the passenger-perspective camera, viewers become temporary occupants in this
+            mobile confessional space where emotional intensity is naturally amplified.
+            The front seat now functions as modern America's secular confession booth, where drivers speak candidly to
+            invisible audiences. Here, everyday activities—eating, applying makeup, casual conversation—transform into
+            performance. The dashboard becomes a display table, cup holders essential architecture, and parking lots
+            stationary studios where the boundaries between private experience and public presentation continuously
+            blur.
+          </p>
+        </article>
+        <article class="project-component">
+          <figure class="image-container">
+            <img src="img/projects/Digital Homunculus/Main Image/Screenshot 2025-01-17 161408.png" />
+          </figure>
+          <h2 class="item-title">Digital Homunculus, 2024</h2>
+          <p class="item-materials">Non Player Character, Unity</p>
+          <p class="item-description">
+            Tomorrow will inherit our screen-faced selves. Tomorrow will birth new digital homunculi. These
+            monitor-headed
+            characters aren't just strange bodies in a virtual space—they're us, reassembled through the content we
+            watch
+            and share—viral hits alongside intimate confessions—embodying how our digital selves now exist independently
+            of us.
+          </p>
+        </article>
+        <!-- To add more projects, copy the entire project-component article and paste it here -->
+      </div>
+    </section>
+
+    <!-- Right Column - Process -->
+    <section class="column right" aria-label="Process documentation">
+      <header class="column-header">
+        <h1 class="column-title">Process</h1>
+      </header>
+
+      <div class="process-content">
+        <!-- March 2025 - Vehicle Simulation -->
+        <article class="process-component">
+          <figure class="image-container">
+            <img src="img/process/car.gif" alt="Car simulation" loading="lazy" width="800" height="600" />
+          </figure>
+          <p class="process-caption">Vehicle physics simulation with realistic handling and environmental interactions.
+          </p>
+        </article>
+
+        <article class="process-component">
+          <div class="process-grid two-column">
+            <figure class="image-container">
+              <img src="img/process/car-debug.gif" alt="Car debug visualization" loading="lazy" width="800"
+                height="600" />
+              <figcaption class="process-caption">Debugging visualization of car physics parameters</figcaption>
+            </figure>
+            <figure class="image-container">
+              <img src="img/process/sandwhich.gif" alt="Food presentation" loading="lazy" width="800" height="600" />
+              <figcaption class="process-caption">Animated GIFs integrated into Unity environment</figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <!-- February 2025 - Hardware Development -->
+        <article class="process-component featured">
+          <figure class="image-container">
+            <img src="img/process/IMG_20250219_113335270.jpg" alt="Hardware assembly" loading="lazy" width="800"
+              height="600" />
+          </figure>
+          <p class="process-caption">Sine wave generator with analog speaker output - custom hardware interface for
+            interactive installations.</p>
+        </article>
+
+        <article class="process-component">
+          <div class="process-grid two-column">
+            <figure class="image-container">
+              <img src="img/process/arduino.gif" alt="Arduino interaction" loading="lazy" width="800" height="600" />
+              <figcaption class="process-caption">Depth sensor data feeding into TouchDesigner</figcaption>
+            </figure>
+            <figure class="image-container">
+              <img src="img/process/print.gif" alt="3D printing process" loading="lazy" width="800" height="600" />
+              <figcaption class="process-caption">3D printing process documentation</figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <article class="process-component">
+          <figure class="image-container">
+            <img src="img/process/draw.gif" alt="Pen plotting process" loading="lazy" width="800" height="600" />
+          </figure>
+          <p class="process-caption">Generative art plotted with AxiDraw - converting algorithmic designs into physical
+            drawings.</p>
+        </article>
+
+        <!-- Early February 2025 - Photogrammetry -->
+        <article class="process-component featured">
+          <figure class="image-container">
+            <img src="img/process/meat-planet.png" alt="3D rendering" loading="lazy" width="800" height="600" />
+          </figure>
+          <p class="process-caption">Photogrammetry 3D scan rendering of organic objects with texture preservation.</p>
+        </article>
+
+        <article class="process-component">
+          <div class="process-grid main-sidebar">
+            <figure class="image-container">
+              <img src="img/process/grow.gif" alt="Growth animation" loading="lazy" width="800" height="600" />
+              <figcaption class="process-caption">Procedural growth animation based on cellular automata</figcaption>
+            </figure>
+            <figure class="image-container">
+              <img src="img/process/IMG-20250204-WA0004.jpg" alt="Scanning setup" loading="lazy" width="800"
+                height="600" />
+              <figcaption class="process-caption">Photogrammetry capture setup</figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <!-- January 2025 - Exhibition -->
+        <article class="process-component">
+          <div class="process-grid two-column">
+            <figure class="image-container">
+              <img src="img/process/exhibition1.JPG" alt="Exhibition documentation" loading="lazy" width="800"
+                height="600" />
+              <figcaption class="process-caption">Gallery installation view</figcaption>
+            </figure>
+            <figure class="image-container">
+              <img src="img/process/exhibition3.JPG" alt="Exhibition view" loading="lazy" width="800" height="600" />
+              <figcaption class="process-caption">Interactive display with visitor engagement</figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <article class="process-component">
+          <figure class="image-container">
+            <img src="img/process/Screenshot 2025-01-17 155325.png" alt="Interface design" loading="lazy" width="800"
+              height="600" />
+          </figure>
+          <p class="process-caption">UI design for interactive experience - balancing aesthetic and functional
+            requirements.</p>
+        </article>
+
+        <!-- December 2024 - Controller Development -->
+        <article class="process-component">
+          <div class="process-grid main-sidebar">
+            <figure class="image-container">
+              <img src="img/process/IMG_20241206_102418326.jpg" alt="Hardware testing" loading="lazy" width="800"
+                height="600" />
+              <figcaption class="process-caption">Hardware testing and integration</figcaption>
+            </figure>
+            <figure class="image-container">
+              <img src="img/process/Screenshot 2024-12-11 172212.png" alt="Controller mapping" loading="lazy"
+                width="800" height="600" />
+              <figcaption class="process-caption">Alternative controller technical drawing</figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <article class="process-component">
+          <div class="process-grid two-column">
+            <figure class="image-container">
+              <img src="img/process/Screenshot 2025-01-17 154126.png" alt="UI development" loading="lazy" width="800"
+                height="600" />
+              <figcaption class="process-caption">Interface wireframe development</figcaption>
+            </figure>
+            <figure class="image-container">
+              <img src="img/process/doc-wide.png" alt="Documentation" loading="lazy" width="800" height="600" />
+              <figcaption class="process-caption">Project documentation</figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <!-- November 2024 - Technical Research -->
+        <article class="process-component featured">
+          <figure class="image-container">
+            <img src="img/process/Screenshot 2024-11-29 143622.png" alt="Concept visualization" loading="lazy"
+              width="800" height="600" />
+          </figure>
+          <p class="process-caption">Proof of concept: web requests to YouTube API from Unity - establishing data
+            pipeline for content integration.</p>
+        </article>
+
+        <article class="process-component">
+          <div class="process-grid two-column">
+            <figure class="image-container">
+              <img src="img/process/Screenshot 2024-11-14 124551.png" alt="Circuit design" loading="lazy" width="800"
+                height="600" />
+              <figcaption class="process-caption">Circuit design schematic</figcaption>
+            </figure>
+            <figure class="image-container">
+              <img src="img/process/IMG_20241127_193739_720.jpg" alt="Depth sensor setup" loading="lazy" width="800"
+                height="600" />
+              <figcaption class="process-caption">Depth sensor calibration process</figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <article class="process-component">
+          <figure class="image-container">
+            <img src="img/process/scan.jpg" alt="Depth sensor visualization" loading="lazy" width="800" height="600" />
+          </figure>
+          <p class="process-caption">Depth sensor visualization output with color-mapping for spatial relationships.</p>
+        </article>
+
+        <!-- More process entries follow same pattern -->
+        <!-- Prototype Development -->
+        <article class="process-component">
+          <div class="process-grid main-sidebar">
+            <figure class="image-container">
+              <img src="img/process/proto.png" alt="Prototype visualization" loading="lazy" width="800" height="600" />
+              <figcaption class="process-caption">Early photo bash of the digital homunculus</figcaption>
+            </figure>
+            <figure class="image-container">
+              <img src="img/process/proto2.png" alt="Prototype iteration" loading="lazy" width="800" height="600" />
+              <figcaption class="process-caption">Concept refinement sketch</figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <article class="process-component">
+          <div class="process-grid two-column">
+            <figure class="image-container">
+              <img src="img/process/proto3.png" alt="Prototype development" loading="lazy" width="800" height="600" />
+              <figcaption class="process-caption">Lighting tests in 3D environment</figcaption>
+            </figure>
+            <figure class="image-container">
+              <img src="img/process/loop.png" alt="Animation loop" loading="lazy" width="800" height="600" />
+              <figcaption class="process-caption">Animation cycle planning</figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <!-- Emergent Systems -->
+        <article class="process-component featured">
+          <figure class="image-container">
+            <img src="img/process/boids.gif" alt="Flocking simulation" loading="lazy" width="800" height="600" />
+          </figure>
+          <p class="process-caption">Emergent behavior through three simple rules: alignment, separation, cohesion -
+            studying complex systems with minimal parameters.</p>
+        </article>
+
+        <article class="process-component">
+          <div class="process-grid two-column">
+            <figure class="image-container">
+              <img src="img/process/ripple.gif" alt="Ripple effect" loading="lazy" width="800" height="600" />
+              <figcaption class="process-caption">Procedural ripple effect simulation</figcaption>
+            </figure>
+            <figure class="image-container">
+              <img src="img/process/rippleinteraction.gif" alt="Interactive ripples" loading="lazy" width="800"
+                height="600" />
+              <figcaption class="process-caption">Interactive ripple response system</figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <!-- Generative Art -->
+        <article class="process-component">
+          <div class="process-grid two-column">
+            <figure class="image-container">
+              <img src="img/process/RIDGE-0.png" alt="Generative pattern" loading="lazy" width="800" height="600" />
+              <figcaption class="process-caption">Generative art with noise and trigonometric functions</figcaption>
+            </figure>
+            <figure class="image-container">
+              <img src="img/process/SUGAR_STACK-1.png" alt="Algorithmic structure" loading="lazy" width="800"
+                height="600" />
+              <figcaption class="process-caption">Algorithmic pattern generation</figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <article class="process-component">
+          <div class="process-grid two-column">
+            <figure class="image-container">
+              <img src="img/process/particle_wf_demo.gif" alt="Particle system" loading="lazy" width="800"
+                height="600" />
+              <figcaption class="process-caption">Particle system wireframe demo</figcaption>
+            </figure>
+            <figure class="image-container">
+              <img src="img/process/npc.png" alt="Character design" loading="lazy" width="800" height="600" />
+              <figcaption class="process-caption">Character design concept</figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <!-- Digital Humanities -->
+        <article class="process-component">
+          <figure class="image-container">
+            <img src="img/process/Montage.jpg" alt="Visual data montage" loading="lazy" width="800" height="600" />
+          </figure>
+          <p class="process-caption">Computational analysis of cultural artifacts - visual data exploration.</p>
+        </article>
+
+        <article class="process-component">
+          <div class="process-grid main-sidebar">
+            <figure class="image-container">
+              <img src="img/process/Open... - hue_median vs saturation_median.jpg" alt="Data visualization"
+                loading="lazy" width="800" height="600" />
+              <figcaption class="process-caption">Color analysis visualization</figcaption>
+            </figure>
+            <figure class="image-container">
+              <img src="img/process/YZ 360.jpg" alt="Data mapping" loading="lazy" width="800" height="600" />
+              <figcaption class="process-caption">3D data distribution visualization</figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <!-- Game Development -->
+        <article class="process-component">
+          <div class="process-grid main-sidebar">
+            <figure class="image-container">
+              <img src="img/process/waterproto.PNG" alt="Water simulation" loading="lazy" width="800" height="600" />
+              <figcaption class="process-caption">Water shader progression</figcaption>
+            </figure>
+            <figure class="image-container">
+              <img src="img/process/maplayout.PNG" alt="Level design" loading="lazy" width="800" height="600" />
+              <figcaption class="process-caption">Level design planning</figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <article class="process-component">
+          <div class="process-grid two-column">
+            <figure class="image-container">
+              <img src="img/process/buildmaploop.png" alt="Map generation" loading="lazy" width="800" height="600" />
+              <figcaption class="process-caption">Procedural map generation system</figcaption>
+            </figure>
+            <figure class="image-container">
+              <img src="img/process/water.gif" alt="Water effect" loading="lazy" width="800" height="600" />
+              <figcaption class="process-caption">Animated water shader effect</figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <!-- Board Game Design -->
+        <article class="process-component featured">
+          <figure class="image-container">
+            <img src="img/process/IMG_20171211_123220.jpg" alt="Board game prototype" loading="lazy" width="800"
+              height="600" />
+          </figure>
+          <p class="process-caption">Building card and board games from start to finish - physical game design
+            methodology.</p>
+        </article>
+
+        <article class="process-component">
+          <figure class="image-container">
+            <img src="img/process/20171213_110738.jpg" alt="Game testing" loading="lazy" width="800" height="600" />
+          </figure>
+          <p class="process-caption">Playtesting session with user feedback documentation.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- Bottom Navigation -->
+  <nav class="bottom-nav">
+    <a href="index.html" aria-current="page">WORK</a>
+    <a href="about.html">ABOUT</a>
+  </nav>
+
+  <script>
+    // JavaScript to handle wheel events and prevent body scrolling
+    document.addEventListener('DOMContentLoaded', function () {
+      const columns = document.querySelectorAll('.column');
+
+      columns.forEach(column => {
+        // Handle mouse wheel events
+        column.addEventListener('wheel', function (e) {
+          const scrollTop = this.scrollTop;
+          const scrollHeight = this.scrollHeight;
+          const height = this.clientHeight;
+          const delta = e.deltaY;
+
+          // If we're at the top and trying to scroll up, or at the bottom and trying to scroll down
+          if ((scrollTop <= 0 && delta < 0) ||
+            (scrollTop + height >= scrollHeight && delta > 0)) {
+            e.preventDefault();
+          }
+        }, { passive: false }); // passive: false is required to use preventDefault
+
+        // Handle touch events for mobile devices
+        let startY = 0;
+
+        column.addEventListener('touchstart', function (e) {
+          startY = e.touches[0].clientY;
+        }, { passive: true });
+
+        column.addEventListener('touchmove', function (e) {
+          const scrollTop = this.scrollTop;
+          const scrollHeight = this.scrollHeight;
+          const height = this.clientHeight;
+          const touchY = e.touches[0].clientY;
+          const delta = startY - touchY;
+
+          // If we're at the top and trying to scroll up, or at the bottom and trying to scroll down
+          if ((scrollTop <= 0 && delta < 0) ||
+            (scrollTop + height >= scrollHeight && delta > 0)) {
+            e.preventDefault();
+          }
+
+          startY = touchY;
+        }, { passive: false });
+      });
+    });
+  </script>
+</body>
+
+</html>

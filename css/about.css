@@ -1,0 +1,161 @@
+/* About Page Specific Styles */
+
+/* Main Layout */
+.about-container {
+    padding: var(--spacing-xl) var(--spacing-md);
+    padding-bottom: 6.25rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* About content */
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xl);
+}
+
+.about-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-text {
+    flex: 2;
+    min-width: 300px;
+}
+
+/* About title */
+.about-title {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-huge);
+    margin-bottom: var(--spacing-lg);
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: var(--line-height-huge);
+    color: var(--color-text-dark);
+}
+
+/* About description */
+.about-description {
+    font-size: var(--font-size-body);
+    line-height: var(--line-height-body);
+    font-weight: 300;
+    color: var(--color-text-dark);
+    margin-bottom: var(--spacing-lg);
+}
+
+.about-description p {
+    margin-bottom: var(--spacing-md);
+}
+
+.about-description p:last-child {
+    margin-bottom: 0;
+}
+
+/* Contact information */
+.contact-info {
+    margin-top: var(--spacing-lg);
+}
+
+.contact-title {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-medium);
+    margin-bottom: var(--spacing-sm);
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: var(--line-height-medium);
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-list li {
+    margin-bottom: var(--spacing-xs);
+}
+
+.contact-list a {
+    text-decoration: none;
+    color: var(--color-text-dark);
+}
+
+.contact-list a:focus-visible {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 4px;
+}
+
+/* Image styling */
+.image-container {
+    width: 100%;
+    position: relative;
+    margin-bottom: var(--spacing-md);
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Resume section */
+.resume-section {
+    margin-top: var(--spacing-xl);
+}
+
+.resume-title {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-medium);
+    margin-bottom: var(--spacing-md);
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: var(--line-height-medium);
+}
+
+.resume-link {
+    display: inline-block;
+    padding: var(--spacing-sm) var(--spacing-md);
+    background-color: var(--color-black);
+    color: var(--color-white);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.resume-link:focus-visible {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 4px;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 48rem) {
+
+    /* 768px */
+    .about-container {
+        padding: var(--spacing-md);
+        padding-bottom: 6.25rem;
+    }
+
+    .about-title {
+        font-size: var(--font-size-huge);
+        letter-spacing: normal;
+        line-height: var(--line-height-huge);
+        margin-bottom: var(--spacing-md);
+    }
+
+    .about-content {
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+
+    .about-image,
+    .about-text {
+        flex: 1 1 100%;
+    }
+}

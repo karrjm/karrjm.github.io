@@ -1,0 +1,32 @@
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor directories and files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Dependencies
+/node_modules/
+/npm-debug.log
+/yarn-error.log
+/yarn-debug.log
+
+# Build output
+/dist/
+/build/
+
+# Large media files
+*.mp4
+*.mov
+*.avi
+*.wmv
+*.mkv
+*.gif
+*.webm 
